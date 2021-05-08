@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{ int n,m;
+  int result;
+ scanf("%d",&n);
+ scanf("%d",&m);
+ result= differenceofsum(n,m);
+ printf("%d",result);
+ return 0;
+}
+int differenceofsum(int n,int m)
+{
+    int sum1=0,sum2=0,diff,i;
+    for(i=1;i<m;i++)
+    {if(i%n==0)
+     {sum1=sum1+i;
+       }
+      else 
+       {sum2=sum2+i;
+         }
+    }
+    diff=sum2-sum1;
+    return diff;
+    
+    
+}
